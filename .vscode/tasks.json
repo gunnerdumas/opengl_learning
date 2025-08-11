@@ -12,9 +12,10 @@
                 "-L${workspaceFolder}/libraries/lib",
                 "${workspaceFolder}/src/main.cpp",
                 "${workspaceFolder}/src/glad.c",
+                "${workspaceFolder}/src/Shaders.cpp",
                 "-lglfw3dll",
                 "-o",
-                "${workspaceFolder}/build/cutable.exe"
+                "${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
