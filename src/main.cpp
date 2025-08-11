@@ -12,7 +12,6 @@ void processInput(GLFWwindow* window);
 
 int main()
 {
-    const char* shaderFolderPath = "C:/Users/gtcdu/OneDrive/Programming/opengl/shaders";
     glfwInit();
     //what option we wnat to configure
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -38,7 +37,7 @@ int main()
     }
     glViewport(0, 0, 800, 600);
 
-    Shader ourShader("C:/Users/gtcdu/OneDrive/Programming/opengl/shaders/shader_v.txt", "C:/Users/gtcdu/OneDrive/Programming/opengl/shaders/shader.txt");
+    Shader ourShader("./shaders/shader_v.txt", "./shaders/shader.txt");
    
 
     //setup vertices
