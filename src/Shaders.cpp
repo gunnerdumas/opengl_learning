@@ -12,10 +12,6 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath)
     //ensure ifstrem object can trhwo exceptions:
     vShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
     fShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
-
-    if(!fShaderFile.is_open()){
-        std::cout << "dam its open already" <<  std::endl;
-    }
     
     try
     {
