@@ -1,11 +1,11 @@
 #version 330 core
-layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 aColor;
+in vec2 TexCoords;
+out vec4 color;
 
-out vec3 ourColor;
+uniform sampler2D image;
+uniform vec3 spriteColor;
 
 void main()
-{
-    gl_Position = vec4(aPos, 1.0);
-    ourColor = aColor;
-}
+{    
+    color = vec4(spriteColor, 1.0) * texture(image, TexCoords);
+}  

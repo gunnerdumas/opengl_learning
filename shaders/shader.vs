@@ -1,9 +1,16 @@
 #version 330 core
-out vec4 FragColor;
+layout (location = 0) in vec2 vertex;
+layout (location = 1) in vec3 aColor;
 
-in vec3 ourColor;
+out vec2 TexCoords;
+out vec3 ourColor;
+
+uniform mat4 model;
+uniform mat4 projection;
 
 void main()
 {
-    FragColor = vec4(ourColor, 1.0f);
+    TexCoords = vertex.zw;
+    gl_Position = projection*model*vec4(aPos, 0.0, 1.0);
+    ourColor = aColor;
 }

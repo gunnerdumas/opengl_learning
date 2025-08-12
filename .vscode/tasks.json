@@ -10,9 +10,8 @@
                 "-std=c++17",
                 "-I${workspaceFolder}/libraries/include",
                 "-L${workspaceFolder}/libraries/lib",
-                "${workspaceFolder}/src/main.cpp",
-                "${workspaceFolder}/src/glad.c",
-                "${workspaceFolder}/src/Shaders.cpp",
+                 "${workspaceFolder}/src/glad.c",
+                "${workspaceFolder}/src/*.cpp",
                 "-lglfw3dll",
                 "-o",
                 "${workspaceFolder}/build/${fileBasenameNoExtension}.exe"
