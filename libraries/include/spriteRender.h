@@ -1,5 +1,10 @@
 #ifndef SPRITERENDER_H
 #define SPRITERENDER_H
+
+#include <glad/glad.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#define GLFW_INCLUDE_GLCOREARB
 #include "Shader.h"
 #include "texture.h"
 

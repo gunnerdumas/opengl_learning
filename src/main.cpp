@@ -5,7 +5,7 @@
 #include "resourceManager.h"
 
 
-
+#define GLFW_INCLUDE_GLCOREARB
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
@@ -53,7 +53,7 @@ int main()
 
     //deltaTime for snicning
     //----------------------
-    float deltatime = 0.0f;
+    float deltaTime = 0.0f;
     float lastFrame = 0.0f;
 
 
@@ -64,12 +64,13 @@ int main()
         //Calculate time
         //--------------
         float currentFrame = glfwGetTime();
-        deltatime= currentFrame - lastFrame;
+        deltaTime= currentFrame - lastFrame;
         lastFrame = currentFrame;
         glfwPollEvents();
 
         // input
         // -----
+        Simulation.ProcessInput(deltaTime);
         processInput(window);
 
         // update engine state
